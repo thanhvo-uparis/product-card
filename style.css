@@ -40,14 +40,20 @@ html {
     right: 20px;
 }
 
+.card_heart:hover .bxs-heart {
+    cursor: pointer;
+}
+
 .card_img {
     width: 90%;
+    transition: 0.5s;
 }
 
 .card_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    animation: 0.5s;
 
 }
 
@@ -59,22 +65,101 @@ html {
 
 .card_title {
     color: var(--primary-color);
+    transition: 0.5s;
 }
 
 .card_price {
     color: #fff;
+    transition: 0.5s;
+}
+
+.card:hover .card_img {
+    transform: translateY(-90px) rotate(-20deg);
+}
+
+.card:hover .card_title{
+    transform: translate(-39px,-60px);
+}
+
+.card:hover .card_price {
+    transform: translate(-116px,-62px);
 }
 
 .card_size {
+    display: flex;
+    margin-bottom: 15px;
+}
 
+.card_size span {
+    width: 31px;
+    height: 29px;
+    background-color: #ccc;
+    border-radius: 8px;
+    margin: 0 5px;
+    text-align: center;
+    line-height: 29px;
+}
+
+.card_size h3,
+.card_color h3 {
+    color: #fff;
+    margin-right: 10px;
 }
 
 .card_color {
-
+    display: flex;
+    margin-bottom: 15px;
 }
 
-.card_buy {
-
+.card_color span {
+    width: 23px;
+    height: 23px;
+    margin: 2px 5px 5px;
+    border-radius: 50%;
+    text-align: center;
 }
 
+.card_color .card_color-green {
+    background-color: green;
+}
 
+.card_color .card_color-red {
+    background-color: red;
+}
+
+.card_color .card_color-black {
+    background-color: black;
+}
+
+.card_action button {
+    width: 92px;
+    height: 36px;
+    color: #fff;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.card_action-buy {
+    margin-right: 8px;
+}
+
+.card-footer {
+    margin-top: 180px;
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    /* transition-delay: 0.4s; */
+}
+
+.card:hover .card-footer {
+    transform: translateY(-182px);
+    visibility: visible;
+    opacity: 100;
+}
+
+.card_action button:hover {
+    transform: scale(0.9);
+}
